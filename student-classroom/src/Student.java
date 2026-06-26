@@ -7,6 +7,9 @@ public class Student {
 
     // 생성자
     public Student(int id, String name, int score) {
+        if (score < 0 || score > 100) {
+            throw new IllegalArgumentException("점수는 0에서 100 사이여야 합니다.");
+        }
         this.id = id;
         this.name = name;
         this.score = score;
@@ -28,6 +31,9 @@ public class Student {
     }
 
     public void updateScore(int score) {
+        if (score < 0 || score > 100) {
+            throw new IllegalArgumentException("점수는 0에서 100 사이여야 합니다.");
+        }
         this.score = score;
     }
 
