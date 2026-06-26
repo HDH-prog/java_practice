@@ -2,13 +2,13 @@ public enum PassStatus {
     PASSED("합격"),
     FAILED("불합격");
 
-    private final String passStatus;
+    private final String label;  // passStatus → label
 
-    PassStatus(String passStatus) {
-        this.passStatus = passStatus;
+    PassStatus(String label) {
+        this.label = label;
     }
 
-    public String getPassStatus() {
-        return passStatus;
+    public String getLabel() {
+        return label;
     }
 }
